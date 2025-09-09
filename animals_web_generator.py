@@ -1,10 +1,20 @@
 import json
 
+import requests
 
-def load_data(file_path):
-    """Loads a JSON-file and returns the information."""
-    with open(file_path, "r", encoding="utf-8") as handle:
-        return json.load(handle)
+
+def fetch_animals_from_api(query):
+    """API call for animals with specific amen."""
+    url = f"https://api.api-ninjas.com/v1/animals?name={query}"
+    headers = {"X-Api-Key": "4H21ggbBhTMC1opbfp8FVQ==Bc3M4B0xYTu9ofQw"}
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Fehler beim Abrufen der Daten: {response.status_code}")
+        return []
+
 
 
 def get_available_skin_types(data):
@@ -64,7 +74,7 @@ def generate_html(data, template_path, output_path):
 
 
 def main():
-    animals_data = load_data("animals_data.json")
+    animals_data = fetch_animals_from_api("Fox")
     skin_types = get_available_skin_types(animals_data)
 
     print("Available Skin Types:")
