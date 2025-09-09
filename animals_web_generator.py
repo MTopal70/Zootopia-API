@@ -74,7 +74,9 @@ def generate_html(data, template_path, output_path):
 
 
 def main():
-    animals_data = fetch_animals_from_api("Fox")
+    query = input("Enter a name of an animal: ").strip()
+    animals_data = fetch_animals_from_api(query)
+
     skin_types = get_available_skin_types(animals_data)
 
     print("Available Skin Types:")
