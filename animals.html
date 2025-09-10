@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <style>
+        @gray-darker:               #444444;
+        @gray-dark:                 #696969;
+        @gray:                      #999999;
+        @gray-light:                #cccccc;
+        @gray-lighter:              #ececec;
+        @gray-lightest:             lighten(@gray-lighter,4%);
+
+
+        html {
+          background-color: #ffe9e9;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40pt;
+            font-weight: normal;
+        }
+
+        body {
+          font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0;
+          padding: 1rem;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -moz-font-feature-settings: "liga" on;
+          width: 900px;
+          margin: auto;
+        }
+
+        .card__details {
+            padding-left: 1rem;
+            list-style-type: disc;
+        }
+
+        .card__detail {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .cards__item {
+          background-color: white;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+          overflow: hidden;
+          padding: 1rem;
+          margin: 50px;
+        }
+
+        .card__title {
+          color: @gray-dark;
+          font-size: 1.25rem;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        .card__text {
+          flex: 1 1 auto;
+          font-size: 0.95rem;
+          line-height: 2;
+          margin-bottom: 1.25rem;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>My Animal Repository</h1>
+        <ul class="cards">
+            <li class="cards__item">
+  <div class="card__title">American Foxhound</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> North-America</li>
+      <li class="card__detail"><strong>Type:</strong> Hound</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 10 to 12 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+      <li class="card__detail"><em>Sweet, kind, loyal, and very loving!</em></li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">English Foxhound</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> Europe</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 10 to 13 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Fox Terrier</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> Europe</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis Lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 14 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+      <li class="card__detail"><em>First bred in the mid-19th century!</em></li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Golden-Crowned Flying Fox</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Herbivore</li>
+      <li class="card__detail"><strong>Location:</strong> Asia</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Acerodon jubatus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> unknown</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Red Fox</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> Africa</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Vulpes vulpes</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 2-4 years in the wild, 10-12 in captivity</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Smooth Fox Terrier</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> Europe</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 12 – 15 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Toy Fox Terrier</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> North-America</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 11-14 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+<li class="cards__item">
+  <div class="card__title">Wire Fox Terrier</div>
+  <div class="card__text">
+    <ul class="card__details">
+      <li class="card__detail"><strong>Diet:</strong> Omnivore</li>
+      <li class="card__detail"><strong>Location:</strong> Europe</li>
+      <li class="card__detail"><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class="card__detail"><strong>Lifespan:</strong> 13 – 14 years</li>
+      <li class="card__detail"><strong>Skin Type:</strong> Hair</li>
+    </ul>
+  </div>
+</li>
+
+        </ul>
+    </body>
+</html>
