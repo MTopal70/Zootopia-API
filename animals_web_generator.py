@@ -77,6 +77,13 @@ def main():
     query = input("Enter a name of an animal: ").strip()
     animals_data = fetch_animals_from_api(query)
 
+    if not animals_data:
+        print("No data received from API.")
+        return
+
+    generate_html(animals_data, "animals_template.html", "animals.html")
+    print("Website was successfully generated to the file animals.html.")
+
     skin_types = get_available_skin_types(animals_data)
 
     print("Available Skin Types:")
