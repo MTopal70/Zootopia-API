@@ -72,17 +72,29 @@ def generate_html(data, template_path, output_path):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(final_html)
 
+def generate_error_html(animal_name, template_path, output_path):
+    """If no animals found, create a nice error message in the animals.html file."""
+    with open(template_path, "r", encoding="utf-8") as f:
+        template = f.read()
+
+    error_message = f'<h2 style="text-align:center; color:#cc0000;">The animal "{animal_name}" doesn\'t exist.</h2>'
+    final_html = template.replace("__REPLACE_ANIMALS_INFO__", error_message)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(final_html)
+
+
 
 def main():
     query = input("Enter a name of an animal: ").strip()
     animals_data = fetch_animals_from_api(query)
 
     if not animals_data:
-        print("No data received from API.")
-        return
-
-    generate_html(animals_data, "animals_template.html", "animals.html")
-    print("Website was successfully generated to the file animals.html.")
+        generate_error_html(query, "animals_template.html", "animals.html")
+        print(f'No animals found. Error page generated for "{query}".')
+    else:
+        generate_html(animals_data, "animals_template.html", "animals.html")
+        print("Website was successfully generated to the file animals.html.")
 
     skin_types = get_available_skin_types(animals_data)
 
