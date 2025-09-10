@@ -92,6 +92,7 @@ def main():
     if not animals_data:
         generate_error_html(query, "animals_template.html", "animals.html")
         print(f'No animals found. Error page generated for "{query}".')
+        return #quit the programm if no animal data available
     else:
         generate_html(animals_data, "animals_template.html", "animals.html")
         print("Website was successfully generated to the file animals.html.")
