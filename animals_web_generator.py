@@ -1,10 +1,10 @@
 import json
 
-import requests
+import data_fetcher
 
-
+"""
 def fetch_animals_from_api(query):
-    """API call for animals with specific amen."""
+    """"API call for animals with specific amen.""""
     url = f"https://api.api-ninjas.com/v1/animals?name={query}"
     headers = {"X-Api-Key": "4H21ggbBhTMC1opbfp8FVQ==Bc3M4B0xYTu9ofQw"}
     response = requests.get(url, headers=headers)
@@ -14,7 +14,7 @@ def fetch_animals_from_api(query):
     else:
         print(f"Fehler beim Abrufen der Daten: {response.status_code}")
         return []
-
+"""
 
 
 def get_available_skin_types(data):
@@ -87,7 +87,7 @@ def generate_error_html(animal_name, template_path, output_path):
 
 def main():
     query = input("Enter a name of an animal: ").strip()
-    animals_data = fetch_animals_from_api(query)
+    animals_data = data_fetcher.fetch_data(query)
 
     if not animals_data:
         generate_error_html(query, "animals_template.html", "animals.html")
